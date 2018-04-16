@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
+// import Game from './game';
+import Statex from './state2';
 import registerServiceWorker from './registerServiceWorker';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<Game />, document.getElementById('root'));
+ReactDOM.render(<Statex />, document.getElementById('root'));
 // const i = 110;
 // var style=  {
 //     fontSize: 12,
@@ -38,74 +42,19 @@ import registerServiceWorker from './registerServiceWorker';
 //     document.getElementById('root')
 // );
 
-class Square extends React.Component {
-    // constructor(){
-    //     super();
-    //     this.state = {
-    //         value: null
-    //     };
-    // };
-    render(){
-        return(
-            <p className="square" onClick={()=>this.props.onClick()}>{this.props.value}</p>
-        );
-    }
-};
-class Board extends React.Component {
-    constructor(){
-        super();
-        this.state = {
-            squares: Array(9).fill(null)
-        }
-    };
-    renderSquare(i){
-        return <Square value={this.state.squares[i]} onClick={()=>this.handleClick(i)} />;
-    };
-    handleClick(i){
-        const squares = this.state.squares.slice();
-        squares[i] = 'x';
-        this.setState({squares:squares})
-    };
-    render(){
-        return (
-            <div>
-                {/* <div>{status}</div> */}
-                <div class="xx">
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
-                    {this.renderSquare(3)}
-                    {this.renderSquare(4)}
-                    {this.renderSquare(5)}
-                    {this.renderSquare(6)}
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
-                    {this.renderSquare(9)}
-                </div>
-            </div>
-        )
-    }
-};
-ReactDOM.render(
-    <Board />,
-    document.getElementById('root')
-);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// class Square extends React.Component {
+//     // constructor(){
+//     //     super();
+//     //     this.state = {
+//     //         value: null
+//     //     };
+//     // };
+//     render(){
+//         return(
+//             <p className="square" onClick={()=>this.props.onClick()}>{this.props.value}</p>
+//         );
+//     }
+// };
 
 
 
